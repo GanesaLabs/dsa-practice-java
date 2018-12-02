@@ -1,23 +1,23 @@
 package com.glab.algorithms.search;
 
 /**
- * Linear Search Problem: Given an array arr[] of n elements, write a function
- * to search a given element x in arr[].
+ * Binary Search Given a sorted array arr[] of n elements, write a function to
+ * search a given element x in arr[]. A simple approach is to do linear
+ * search.The time complexity of above algorithm is O(n). Another approach to
+ * perform the same task is using Binary Search.
  * 
- * Examples :
+ * Binary Search: Search a sorted array by repeatedly dividing the search
+ * interval in half. Begin with an interval covering the whole array. If the
+ * value of the search key is less than the item in the middle of the interval,
+ * narrow the interval to the lower half. Otherwise narrow it to the upper half.
+ * Repeatedly check until the value is found or the interval is empty.
  * 
- * Input : arr[] = {10, 20, 80, 30, 60, 50, 110, 100, 130, 170} x = 110;
- * 
- * Output : 6 Element x is present at index 6
- * 
- * Input : arr[] = {10, 20, 80, 30, 60, 50, 110, 100, 130, 170} x = 175; Output
- * : -1 Element x is not present in arr[].
  * 
  * @author ganesa-vijayakumar
  *
  */
 
-public class LinearSearch {
+public class BinarySearch {
 
 	public static void main(String arg[]) {
 		int arr[] = { 10, 20, 80, 30, 60, 50, 110, 100, 130, 170 };
@@ -52,8 +52,11 @@ public class LinearSearch {
 	 *         -1
 	 */
 	private static int findIndex(int[] arr, int x) {
+		
+		int arrLength = arr.length;
+		
 		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == x) {
+			if (arr[arrLength/2] == x) {
 				return i;
 			}
 		}
