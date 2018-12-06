@@ -1,7 +1,5 @@
 package basic;
 
-import basic.GUtil;
-
 public class Mtry {
 
 	public static void main(String[] args) {
